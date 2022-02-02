@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JavaScript function to find the area of a triangle</title>
+    <!-- fontawsome kit -->
+    <script
+      src="https://kit.fontawesome.com/d6aef9706e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .fab {
+        font-size: xx-large;
+        cursor: pointer;
+        color: white;
+      }
+
+      .mainsection {
+        height: 95vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+      }
+
+      input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid white;
+        padding: 2px 5px;
+        color: white;
+      }
+
+      button {
+        border: navajowhite;
+        color: white;
+        background: rgba(39, 37, 37, 0.651);
+        border-radius: 20px;
+        padding: 10px;
+        font-weight: bold;
+        transition: all 1s;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: white;
+        color: rebeccapurple;
+      }
+      footer {
+        color: white;
+        padding: 16px 0px;
+        background-color: #565151a8;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+    </style>
+  </head>
+
+  <body style="text-align: center">
+    <section class="mainsection">
+      <div>
+        <h1
+          style="
+            color: rgba(0, 128, 0, 0.788);
+            text-transform: uppercase;
+            padding-bottom: 20px;
+          "
+        >
+          triangle generator
+        </h1>
+
+        <h4>JavaScript function to find the area of a triangle</h4>
+
+        <label for="side1"> Enter the value of side 1: </label>
+
+        <input type="number" id="side1" placeholder="১ম বাহু" />
+        <br /><br />
+
+        <label for="side2"> Enter the value of side 2: </label>
+
+        <input type="number" id="side2" placeholder="২য় বাহু" />
+        <br /><br />
+
+        <label for="side3"> Enter the value of side 3: </label>
+
+        <input type="number" id="side3" placeholder="৩য় বাহু" />
+        <br /><br />
+
+        <button onclick="Area()">Click Here!</button>
+        <p>Area of Triangle: <span id="display"></span></p>
+        <h4>
+          See my Facebook Profile 👉
+          <a target="_blank" href="https://facebook.com/mdjaber.ali.961"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </h4>
+      </div>
+    </section>
+    <footer>
+      <p>alright reserved &copy; copyright triangle generator</p>
+      <h4>
+        <marquee behavior="" direction="right">
+          <b
+            style="
+              font-size: 26px;
+              color: rgba(0, 128, 0, 0.788);
+              font-weight: bold;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+            "
+            >Creator</b
+          >
+          <span style="color: orange"> Md:</span>
+          jaber ali
+        </marquee>
+      </h4>
+    </footer>
+
+    <script type="text/javascript">
+      function Area() {
+        var side1 = parseInt(document.getElementById("side1").value);
+
+        var side2 = parseInt(document.getElementById("side2").value);
+
+        var side3 = parseInt(document.getElementById("side3").value);
+
+        console.log(typeof side1);
+        var s = (side1 + side2 + side3) / 2;
+
+        var area = Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3)));
+
+        document.getElementById("display").innerHTML = area;
+      }
+    </script>
+  </body>
+</html>
